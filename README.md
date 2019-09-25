@@ -39,6 +39,12 @@ read path
 
 #moving to the desired location
 cd $path
+echo "moving to $path"
+echo $PWD
+#Check for correct change directory
+        if [ "$path" != "$PWD" ]; then
+                echo "Error creating the folder structure"
+        fi
 
 #Create App folder
 mkdir RentalCarApp
@@ -49,7 +55,6 @@ mkdir database
 mkdir scripts
 
 echo "struture created successfully"
-
 Evaluation
 -----------
 
