@@ -41,7 +41,8 @@ read path
 cd $path
 echo "moving to $path"
 echo $PWD
-#Check for correct change directory
+#Check for correct change directory   
+
         if [ "$path" != "$PWD" ]; then
                 echo "Error creating the folder structure"
         fi
