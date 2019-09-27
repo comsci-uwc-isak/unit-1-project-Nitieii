@@ -30,9 +30,11 @@ The following script creates the app folder and inside it creates two more folde
 #! /bin/bash
 
 #This file creates the structure for the
+
 #minimal car Rental_App
 
 echo "Starring the installation"
+
 echo "Enter the path where you want to insall. Press Enter"
 
 read path
@@ -48,14 +50,17 @@ echo $PWD
         fi
 
 #Create App folder
+
 mkdir RentalCarApp
 
 cd RentalCarApp
 
 mkdir database
+
 mkdir scripts
 
 echo "struture created successfully"
+
 Evaluation
 -----------
 
