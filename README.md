@@ -61,6 +61,13 @@ mkdir scripts
 
 echo "struture created successfully"
 
+## 2.Development of the function: Create a new car
+The following steps summarize the algorithm to create a new car in the system. 
+① Get input
+② Check number of argurments; if 4 then continue, if not ext 'message'
+③ Write to main file with one extra line not erasing other Entries.
+④ Create car tip file with license plate.txt
+
 Evaluation
 -----------
 
