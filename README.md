@@ -17,6 +17,20 @@ Planning
 ### Defining the Problem (Topic 1.1.1)
  A car rental office wants to purchase a program that collect basic information about the distance driven for each car. This program should have easy commands to create information about car: Name, model of cars and number of passengers. Furthermore, the user can recored the trip of each car, the day start, end and the kilometer that the car runned.  Also, they can edit the record (add or remove) the information of the car they want. Last but not least, the user can storage the system and backup it in their computer or USB. 
  
+ ### Solution proposed
+ 
+ 
+ ### Success Criteria
+ These are measurabke outcomes
+ 1. A car can be created and stored in the database
+ 1. A car information can be edited
+ 1. A car can be deleted from the database
+ 1. The installation is ***simple-> one step process***
+ 1. A summery (total/average distance traveled)can be generated for a particular car
+ 1.Trips can be recorded and stored for an existing car.
+ 1. A basic detabase system is implemented.
+ 1. A basic backup functionallity is available.
+ 
 Design
 ---------
 ![SystemDiagram][IMG_]
