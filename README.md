@@ -18,7 +18,7 @@ Planning
  A car rental office wants to purchase a program that collect basic information about the distance driven for each car. This program should have easy commands to create information about car: Name, model of cars and number of passengers. Furthermore, the user can recored the trip of each car, the day start, end and the kilometer that the car runned.  Also, they can edit the record (add or remove) the information of the car they want. Last but not least, the user can storage the system and backup it in their computer or USB. 
  
  ### Solution proposed
- 
+ I decided that choosing Bash Script would be the best solution for Car Rental App because the user required a simple installation and could use the program easily. Next, I choose terminal to write the program, because the target to       and it has already been on computer so we no need to install it. 
  
  ### Success Criteria
  These are measurabke outcomes
@@ -27,7 +27,7 @@ Planning
  1. A car can be deleted from the database
  1. The installation is ***simple-> one step process***
  1. A summery (total/average distance traveled)can be generated for a particular car
- 1.Trips can be recorded and stored for an existing car.
+ 1. Trips can be recorded and stored for an existing car.
  1. A basic detabase system is implemented.
  1. A basic backup functionallity is available.
  
