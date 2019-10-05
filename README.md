@@ -92,7 +92,9 @@ The following steps summarize the algorithm to create a new car in the system.
 *)Summerize the total km per each car
 
   ①　Read the file and split the text into the array
+  
   ②　Calculate the sum of the km
+  
   ③ Print the total km to the TotalperCar.txt
   
 Evaluation
