@@ -77,12 +77,24 @@ echo "struture created successfully"
 
 ## 2.Development of the function: Create a new car
 The following steps summarize the algorithm to create a new car in the system. 
+
 ① Get input
+
 ② Check number of argurments; if 4 then continue, if not ext 'message'
     'if [ $# -eq 4 ]'
+
 ③ Write to main file with one extra line not erasing other Entries.
+
 ④ Create car tip file with license plate.txt
 
+## 3. Development of the function: Summerize
+
+*)Summerize the total km per each car
+
+  ①　Read the file and split the text into the array
+  ②　Calculate the sum of the km
+  ③ Print the total km to the TotalperCar.txt
+  
 Evaluation
 -----------
 
