@@ -33,7 +33,7 @@ Planning
  
 Design
 ---------
-![SystemDiagram][IMG_]
+![SystemDiagram][Diagram.jpg]
 **Fig. 1** First sketch of the system showing the main input/output components, actions and software requirement.
 
 Development
