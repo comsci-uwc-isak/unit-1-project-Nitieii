@@ -120,17 +120,21 @@ Evaluation
 
 Test1:
 
-First run of the program was unsuccessful because the db foldler was not existent.
+1. First run of the program was unsuccessful because the db foldler was not existent.
 
 Also the create program did not store the license file inside the db folder. Chaging
 
 the line `echo " " > $license` to 'echo " " > db/$liecense.txt'.Solved this issue.
 
-
-Second run of the program we had one issue: the test file needed to move to the main folder 
+2. Second run of the program we had one issue: the test file needed to move to the main folder 
 
 ```.sh
 cd ../
 ```
 This is necessary because the `create.sh` resides in the ain folder whereas the test file is inside the /tests folders..
 
+3. Third run: we check that the car was added to the main file. The following command is used:
+
+`lastLine=$( tail -n 1 db/maincarfile.txt )`
+
+This line is read the file maincarfile.txt from the last line (tail), 1 is number of the line we read from the last line. Because the car has just added so we just need to check the last line of the file. 
