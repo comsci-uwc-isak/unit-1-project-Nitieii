@@ -40,7 +40,7 @@ Development
 --------
 ### 1. Script to install the app
 The following script creates the app folder and inside it creates two more folder: database and scripts
-
+```.sh
 #! /bin/bash
 
 #This file creates the structure for the
@@ -74,7 +74,7 @@ mkdir database
 mkdir scripts
 
 echo "struture created successfully"
-
+```
 ## 2.Development of the function: Create a new car
 The following steps summarize the algorithm to create a new car in the system. 
 
