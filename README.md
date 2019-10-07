@@ -118,5 +118,15 @@ The following steps summarize the algorithm to create a new car in the system.
 Evaluation
 -----------
 
+Test1:
+First run of the program was unsuccessful because the db foldler was not existent.
+Also the create program did not store the license file inside the db folder. Chaging
+the line `echo " " > $license` to 'echo " " > db/$liecense.txt'.Solved this issue.
 
+
+Second run of the program we had one issue: the test file needed to move to the main folder 
+```.sh
+cd ../
+```
+This is necessary because the `create.sh` resides in the ain folder whereas the test file is inside the /tests folders..
 
