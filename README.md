@@ -40,8 +40,7 @@ Development
 --------
 ### 1. Script to install the app
 The following script creates the app folder and inside it creates two more folder: database and scripts
-```.sh
-#! /bin/bash
+#!/bin/bash
 
 #This file creates the structure for the
 
@@ -57,6 +56,7 @@ read path
 cd $path
 echo "moving to $path"
 echo $PWD
+
 #Check for correct change directory   
 
         if [ "$path" != "$PWD" ]; then
@@ -74,7 +74,7 @@ mkdir database
 mkdir scripts
 
 echo "struture created successfully"
-```
+
 ## 2.Development of the function: Create a new car
 The following steps summarize the algorithm to create a new car in the system. 
 
@@ -100,14 +100,19 @@ The following steps summarize the algorithm to create a new car in the system.
  *)Summerize the total car and km per month
  
  ①　Read all the file in car folder and merge files in merge.txt
+ 
  ②  Read the merge.txt file and split the text into the array
+ 
  ③  Count the number of car in each month
+ 
  ④  Calculate the sum of the km
+ 
  ⑤  Print the number of cars and the total km to TotalPerMonth.txt
  
 ## 4. Development of the function: Backup
 
 ①　Input the source location and location you want to backup
+
 ②  Copy file from source location to backup location
   
 Evaluation
