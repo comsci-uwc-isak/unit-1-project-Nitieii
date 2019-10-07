@@ -148,3 +148,5 @@ else
 fi
 `
 Error line with the if syntax: too many argument. Because $lastline has space between the words so we have to use " " for $lastline. => "$lastline"
+
+**Summary:** Alpha testing, White box testing and Dynamic testing 
