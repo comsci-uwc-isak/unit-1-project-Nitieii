@@ -17,10 +17,10 @@ Planning
 ### Defining the Problem (Topic 1.1.1)
  A car rental office wants to purchase a program that collect basic information about the distance driven for each car. This program should have easy commands to create information about car: Name, model of cars and number of passengers. Furthermore, the user can recored the trip of each car, the day start, end and the kilometer that the car runned.  Also, they can edit the record (add or remove) the information of the car they want. Last but not least, the user can storage the system and backup it in their computer or USB. 
  
- ### Solution proposed
+### Solution proposed
  I decided that choosing Bash Script would be the best solution for Car Rental App because the user required a simple installation and could use the program easily. Next, I choose terminal to write the program, because the target to       and it has already been on computer so we no need to install it. 
  
- ### Success Criteria
+### Success Criteria
  These are measurabke outcomes
  1. A car can be created and stored in the database
  1. A car information can be edited
@@ -81,7 +81,7 @@ The following steps summarize the algorithm to create a new car in the system.
 ① Get input
 
 ② Check number of argurments; if 4 then continue, if not ext 'message'
-    'if [ $# -eq 4 ]'
+    if [ $# -eq 4 ]
 
 ③ Write to main file with one extra line not erasing other Entries.
 
@@ -91,29 +91,29 @@ The following steps summarize the algorithm to create a new car in the system.
 
 *)Summerize the total km per each car
 
-  ①　Read the file and split the text into the array
+  ① Read the file and split the text into the array
   
-  ②　Calculate the sum of the km
+  ② Calculate the sum of the km
   
   ③ Print the total km to the TotalperCar.txt
 
  *)Summerize the total car and km per month
  
- ①　Read all the file in car folder and merge files in merge.txt
+ ① Read all the file in car folder and merge files in merge.txt
  
- ②  Read the merge.txt file and split the text into the array
+ ② Read the merge.txt file and split the text into the array
  
- ③  Count the number of car in each month
+ ③ Count the number of car in each month
  
- ④  Calculate the sum of the km
+ ④ Calculate the sum of the km
  
- ⑤  Print the number of cars and the total km to TotalPerMonth.txt
+ ⑤ Print the number of cars and the total km to TotalPerMonth.txt
  
 ## 4. Development of the function: Backup
 
-①　Input the source location and location you want to backup
+① Input the source location and location you want to backup
 
-②  Copy file from source location to backup location
+② Copy file from source location to backup location
   
 Evaluation
 -----------
