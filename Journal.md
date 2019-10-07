@@ -15,3 +15,8 @@ Today I work on
 1. Summary the km of each car
 2. Read file line by line
 3. Split string into 
+
+Reflection (Oct 7)
+Today I word on
+1. create test file create.sh
+2. learn about types of testing file
