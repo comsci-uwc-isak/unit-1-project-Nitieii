@@ -149,7 +149,7 @@ This is necessary because the `create.sh` resides in the ain folder whereas the 
 
 This line is read the file maincarfile.txt from the last line (tail), 1 is number of the line we read from the last line. Because the car has just added so we just need to check the last line of the file. 
 
-4.Fourth run: error too many arguments
+4. Fourth run: error too many arguments
 
 `if [ "TXM301 nissan red 9" == $lastline ]; then
         echo "Test two: Record was entered correctly: Passed"
