@@ -114,7 +114,15 @@ The following steps summarize the algorithm to create a new car in the system.
 ① Input the source location and location you want to backup
 
 ② Copy file from source location to backup location
-  
+
+## 5. Development of the function: Delete car
+
+① Input the name of the car want to delete
+
+② Read the maincarfile.txt, file the name of the car and delete the line of that car
+
+③ Delete the $plate.txt 
+
 Evaluation
 -----------
 
