@@ -118,7 +118,7 @@ The following steps summarize the algorithm to create a new car in the system.
 Evaluation
 -----------
 
-Test1:
+**A. Test Create.sh**
 
 1. First run of the program was unsuccessful because the db foldler was not existent.
 
@@ -153,3 +153,16 @@ fi
 Error line with the if syntax: too many argument. Because $lastline has space between the words so we have to use " " for $lastline. => "$lastline"
 
 **Summary:** Alpha testing, White box testing and Dynamic testing 
+
+**B. Test Install.sh**
+
+1. First run of the program was unsuccessful because missing ; after the bracket of if syntax
+
+2. Second run if the program was unsuccessful because using -f to find the directory
+
+`
+if [[ -f "$1" ]];then
+	cd $1
+	if [[ -f "/db" && -d "/scripts" ]]
+`
+**Summary:** Alpha testing, Whitebox testing and Dynamic testing
