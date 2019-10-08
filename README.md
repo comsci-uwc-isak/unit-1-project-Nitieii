@@ -131,12 +131,14 @@ the line `echo " " > $license` to 'echo " " > db/$liecense.txt'.Solved this issu
 ```.sh
 cd ../
 ```
+
 This is necessary because the `create.sh` resides in the ain folder whereas the test file is inside the /tests folders..
 
 3. Third run: we check that the car was added to the main file. The following command is used:
 
 `lastLine=$( tail -n 1 db/maincarfile.txt )
 `
+
 This line is read the file maincarfile.txt from the last line (tail), 1 is number of the line we read from the last line. Because the car has just added so we just need to check the last line of the file. 
 
 4.Fourth run: error too many arguments
@@ -147,6 +149,7 @@ else
         echo "Test two: Failed"
 fi
 `
+
 Error line with the if syntax: too many argument. Because $lastline has space between the words so we have to use " " for $lastline. => "$lastline"
 
 **Summary:** Alpha testing, White box testing and Dynamic testing 
