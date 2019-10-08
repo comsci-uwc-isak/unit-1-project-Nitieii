@@ -174,3 +174,11 @@ if [[ -f "$1" ]];then
 	if [[ -f "/db" && -d "/scripts" ]]
 `
 **Summary:** Alpha testing, Whitebox testing and Dynamic testing
+
+**C. Test DeleteCar.sh**
+
+1. First run of the program was unsuccessful because the syntax is not correct
+
+`
+if -f "$carDelete" "maincarfile.txt";
+`
