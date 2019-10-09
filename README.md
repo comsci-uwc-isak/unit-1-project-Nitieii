@@ -91,23 +91,13 @@ The following steps summarize the algorithm to create a new car in the system.
 
 *)Summerize the total km per each car
 
-  ① Read the file and split the text into the array
+  ① Input the name of the car
   
-  ② Calculate the sum of the km
+  ② Check if the number of argument =1 
   
-  ③ Print the total km to the TotalperCar.txt
-
- *)Summerize the total car and km per month
- 
- ① Read all the file in car folder and merge files in merge.txt
- 
- ② Read the merge.txt file and split the text into the array
- 
- ③ Count the number of car in each month
- 
- ④ Calculate the sum of the km
- 
- ⑤ Print the number of cars and the total km to TotalPerMonth.txt
+  ③ Calculate the total sum of km
+  
+  ④ Show the total Km
  
 ## 4. Development of the function: Backup
 
