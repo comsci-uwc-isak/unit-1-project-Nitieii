@@ -4,6 +4,8 @@
 cardelete=$1
 
 #read the file, file the string and delete it
+
+cd ../scripts
 while read -r line
 do
   [[ ! $line =~ "$1" ]] && echo "$line"
