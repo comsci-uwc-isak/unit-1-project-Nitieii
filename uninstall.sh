@@ -5,7 +5,7 @@
 #By deleting all folders
 
 #checking if user didn't click run uninstall program by accident"
-echo "Are you sure you want to uninstall RentalCarApp?"
+echo "Are you sure you want to uninstall CarRentalApp?"
 echo "( Press enter to continue press x to cancel )"
 
 #reading users decision
