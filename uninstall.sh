@@ -18,6 +18,6 @@ if [[ ($cancel == x) ]];then
 
 else
   cd /home/filip/Desktop
-  rm -r RentalCarApp
-  echo "RentalCarApp succesfully uninstalled"
+  rm -r CarRentalApp
+  echo "CarRentalApp succesfully uninstalled"
 fi
