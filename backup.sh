@@ -10,6 +10,6 @@ if [[ $# -ne 1 ]]; then
 	exit
 else
   #we copy database
-	cp -a ~/Desktop/RentalCarApp/db $location
+	cp -a ~/Desktop/CarRentalApp/db $location
 	echo "Successfully backed up into $location."
 fi
