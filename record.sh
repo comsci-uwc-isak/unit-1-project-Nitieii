@@ -11,7 +11,7 @@ datein=$4
 
 
 #moving to instalation folder
-cd ~/Desktop/RentalCarApp/db/
+cd ~/Desktop/CarRental/App/db/
 
 #checking if file plate.txt exist, and if user eneterd
 #4 arguments
