@@ -1,7 +1,7 @@
 #!/bin/bash
 #This program edit the information of an exiting car in the
 #maincarfile
-#user enters [license place] [model] [color] [pp]
+#user enters [license place] [model] [color] [passenger]
 
 #checking if user eneterd correct number of arguments
 if [ $# -ne 4 ]; then
@@ -15,9 +15,9 @@ fi
 
 #Making arguments variables
 license=$1
-maker=$2
-model=$3
-pp=$4
+model=$2
+color=$3
+passenger=$4
 
 #Changing to right directory
 cd ../db
@@ -33,6 +33,6 @@ fi
 #find the line with the given car plate and delete it
 sed -i "/^$license/d" maincarfile.txt
 #add the new information
-echo "$license $maker $model $pp" >> maincarfile.txt
+echo "$license $model $color $passenger" >> maincarfile.txt
 cd ../scripts
 bash frame.sh "Car edited successfully"
