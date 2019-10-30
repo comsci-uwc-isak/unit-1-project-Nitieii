@@ -67,15 +67,11 @@ echo $PWD
 
 #Create App folder
 
-mkdir RentalCarApp
-
-cd RentalCarApp
-
-mkdir database
-
-mkdir scripts
-
-echo "struture created successfully"
+	mkdir RentalCarApp
+	cd RentalCarApp
+	mkdir database
+	mkdir scripts
+	echo "struture created successfully"
 
 ## 2. Create a new car
 The following steps summarize the algorithm to create a new car in the system. 
@@ -84,20 +80,18 @@ The following steps summarize the algorithm to create a new car in the system.
 
 ② Check number of argurments; if 4 then continue, if not ext 'message'
 
-   if [[ ($# -ne 4) ]]; then
-   
+    if [[ ($# -ne 4) ]]; then
     echo "Incorrect input. Please enter Plate, Model, Color, Passengers. Exiting the program... "
-	
     exit
-   fi
+    fi
 
 ③ Write to main file with one extra line not erasing other Entries.
 
-   echo "$plate $model $color $pp" >> ~/Desktop/CarRentalApp/db/maincarfile.txt
+    echo "$plate $model $color $pp" >> ~/Desktop/CarRentalApp/db/maincarfile.txt
 
 ④ Create car tip file with license plate.txt
-
-   echo "" > ~/Desktop/CarRentalApp/db/$plate.txt	
+     
+     echo "" > ~/Desktop/CarRentalApp/db/$plate.txt	
    
 ## 3. Summerize
 
@@ -105,92 +99,59 @@ The following steps summarize the algorithm to create a new car in the system.
   
   ② Check if the number of argument =1 
   
-  if [ $# -ne 1 ]; then
-  
-    echo "Enter license plate"
-    
-    ls
-    
-    exit
-  fi
+    if [ $# -ne 1 ]; then
+      echo "Enter license plate"
+      ls
+      exit
+    fi
   
   ③ Calculate the total sum of km of each car
   
-  total=0
-  
-  while read line;
-  
-  do
+    total=0
+    while read line;
+    do
   	for km in $line
-	
   	do
-	
     	(( total=$km+$total ))
-	
         break
-	
   	done
-	
-   done < "$file.txt"
+    done < "$file.txt"
   
   ④ Show the total Km of each car
   
-  cd ..
-  
-  cd scripts
-  
-  bash frame.sh "TOTAL DISTANCE TRAVELED FOR $file was: $total"
+    cd ..
+    cd scripts
+    bash frame.sh "TOTAL DISTANCE TRAVELED FOR $file was: $total"
 
  　⑤ Calculate the total sum of all cars (if user enter "all" as argument)
   	
-   if [ $file == all ]; then
-   
+    if [ $file == all ]; then
     #Calculating total distance
-    
     total=0
-    
-    #comand read used with while loop will read the file
-    
+    #comand read used with while loop will read the fil
     # chosen of the end of loop done < "file.txt" line by line
-
-   #this will loop throug all the txt files in folder
-    
+    #this will loop throug all the txt files in folder
     for f in *.txt;
-    
     do
-   
-   #This if sentance will avoid maincarfile.txt
-   
+    #This if sentance will avoid maincarfile.txt
         if  [[ ($f == "maincarfile.txt") ]];then
-            
 	    continue
-        
 	fi
-
-   while read line;
-       
+    while read line;
        do
-          
-	  #for loop will go throug line word by word
-          
+	  #for loop will go throug line word by word 
 	  for km in $line
-          
 	  do
-            
 	    (( total=$km+$total ))
-            
 	    #break will break the loop after first cycle
-            
 	    break
-          
 	  done
-        
 	done < "$f"
-    
     done
   
  　⑥ Show the total km of all the cars
-    cd ..
+       
+     cd ..
     cd scripts
     bash frame.sh "TOTAL DISTANCE TRAVELED BY ALL CARS WAS: $total"
     exit	
@@ -201,20 +162,14 @@ The following steps summarize the algorithm to create a new car in the system.
 
    ② Check if the user entered just one argument and copy file from source location to backup location
 
-   if [[ $# -ne 1 ]]; then
-   
-	echo "Sorry, there was an error with backing up your files."
-	
+    if [[ $# -ne 1 ]]; then
+	echo "Sorry, there was an error with backing up your files.
 	exit
-	
 	else
-  	
-	#we copy database
-		
+	#we copy database	
 		cp -a ~/Desktop/RentalCarApp/db $location
-		
 		echo "Successfully backed up into $location."
-   fi
+    fi
 
 ## 5. Development of the function: Delete car
 
@@ -227,19 +182,15 @@ The following steps summarize the algorithm to create a new car in the system.
   
 ③ Check if the car file license is exist or not
   
-  if [ ! -f "$1.txt" ];then
+    if [ ! -f "$1.txt" ];then
 	echo "The file don't exis. Please try again"
 
  ④ Delete the $plate.txt 
   
-  rm $1.txt
-	
+    rm $1.txt
 	bash frame.sh "The file was successfully deleted"
-	
 	#delete whole line which includes the plate
-	
 	sed -i '' "/$1/d" maincarfile.txt
-	
 	bash frame.sh "The car information was successfully deleted"
 
 ## 6. Development of the function: Record trip
