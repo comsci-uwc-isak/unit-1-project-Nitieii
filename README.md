@@ -160,20 +160,33 @@ The following steps summarize the algorithm to create a new car in the system.
     do
    
    #This if sentance will avoid maincarfile.txt
+   
         if  [[ ($f == "maincarfile.txt") ]];then
-            continue
-        fi
+            
+	    continue
+        
+	fi
 
    while read line;
+       
        do
-          #for loop will go throug line word by word
-          for km in $line
-          do
-            (( total=$km+$total ))
-            #break will break the loop after first cycle
-            break
-          done
-        done < "$f"
+          
+	  #for loop will go throug line word by word
+          
+	  for km in $line
+          
+	  do
+            
+	    (( total=$km+$total ))
+            
+	    #break will break the loop after first cycle
+            
+	    break
+          
+	  done
+        
+	done < "$f"
+    
     done
   
  　⑥ Show the total km of all the cars
@@ -189,11 +202,17 @@ The following steps summarize the algorithm to create a new car in the system.
    ② Check if the user entered just one argument and copy file from source location to backup location
 
    if [[ $# -ne 1 ]]; then
+   
 	echo "Sorry, there was an error with backing up your files."
+	
 	exit
+	
 	else
-  	#we copy database
+  	
+	#we copy database
+		
 		cp -a ~/Desktop/RentalCarApp/db $location
+		
 		echo "Successfully backed up into $location."
    fi
 
@@ -214,9 +233,13 @@ The following steps summarize the algorithm to create a new car in the system.
  ④ Delete the $plate.txt 
   
   rm $1.txt
+	
 	bash frame.sh "The file was successfully deleted"
+	
 	#delete whole line which includes the plate
+	
 	sed -i '' "/$1/d" maincarfile.txt
+	
 	bash frame.sh "The car information was successfully deleted"
 
 ## 6. Development of the function: Record trip
