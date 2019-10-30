@@ -83,9 +83,12 @@ The following steps summarize the algorithm to create a new car in the system.
 ① Get input from the arguments
 
 ② Check number of argurments; if 4 then continue, if not ext 'message'
+
    if [[ ($# -ne 4) ]]; then
-  	echo "Incorrect input. Please enter Plate, Model, Color, Passengers. Exiting the program... "
-  	exit
+   
+    echo "Incorrect input. Please enter Plate, Model, Color, Passengers. Exiting the program... "
+	
+    exit
    fi
 
 ③ Write to main file with one extra line not erasing other Entries.
@@ -103,40 +106,59 @@ The following steps summarize the algorithm to create a new car in the system.
   ② Check if the number of argument =1 
   
   if [ $# -ne 1 ]; then
+  
     echo "Enter license plate"
+    
     ls
+    
     exit
   fi
   
   ③ Calculate the total sum of km of each car
   
   total=0
+  
   while read line;
+  
   do
   	for km in $line
+	
   	do
+	
     	(( total=$km+$total ))
+	
         break
+	
   	done
+	
    done < "$file.txt"
   
   ④ Show the total Km of each car
   
   cd ..
+  
   cd scripts
+  
   bash frame.sh "TOTAL DISTANCE TRAVELED FOR $file was: $total"
 
  　⑤ Calculate the total sum of all cars (if user enter "all" as argument)
   	
    if [ $file == all ]; then
+   
     #Calculating total distance
+    
     total=0
+    
     #comand read used with while loop will read the file
+    
     # chosen of the end of loop done < "file.txt" line by line
 
    #this will loop throug all the txt files in folder
+    
     for f in *.txt;
+    
     do
+   
    #This if sentance will avoid maincarfile.txt
         if  [[ ($f == "maincarfile.txt") ]];then
             continue
