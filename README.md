@@ -42,32 +42,26 @@ Development
 --------
 ### 1. Script to install the app
 The following script creates the app folder and inside it creates two more folder: database and scripts
-#!/bin/bash
 
-#This file creates the structure for the
+    #!/bin/bash
+    #This file creates the structure for the
+    #minimal car Rental_App
+        echo "Starring the installation"
+        echo "Enter the path where you want to insall. Press Enter"
+        read path
 
-#minimal car Rental_App
+    #moving to the desired location
+	cd $path
+	echo "moving to $path"
+	echo $PWD
 
-echo "Starring the installation"
-
-echo "Enter the path where you want to insall. Press Enter"
-
-read path
-
-#moving to the desired location
-cd $path
-echo "moving to $path"
-echo $PWD
-
-#Check for correct change directory   
-
-        if [ "$path" != "$PWD" ]; then
+    #Check for correct change directory   
+	if [ "$path" != "$PWD" ]; then
                 echo "Error creating the folder structure"
         fi
 
-#Create App folder
-
-	mkdir RentalCarApp
+    #Create App folder
+ 	mkdir RentalCarApp
 	cd RentalCarApp
 	mkdir database
 	mkdir scripts
@@ -81,8 +75,8 @@ The following steps summarize the algorithm to create a new car in the system.
 ② Check number of argurments; if 4 then continue, if not ext 'message'
 
     if [[ ($# -ne 4) ]]; then
-    echo "Incorrect input. Please enter Plate, Model, Color, Passengers. Exiting the program... "
-    exit
+    	echo "Incorrect input. Please enter Plate, Model, Color, Passengers. Exiting the program... "
+    	exit
     fi
 
 ③ Write to main file with one extra line not erasing other Entries.
@@ -151,7 +145,7 @@ The following steps summarize the algorithm to create a new car in the system.
   
  　⑥ Show the total km of all the cars
        
-     cd ..
+    cd ..
     cd scripts
     bash frame.sh "TOTAL DISTANCE TRAVELED BY ALL CARS WAS: $total"
     exit	
@@ -194,8 +188,39 @@ The following steps summarize the algorithm to create a new car in the system.
 	bash frame.sh "The car information was successfully deleted"
 
 ## 6. Development of the function: Record trip
+
+①　Input the info about the trip in the arguments (plate=$1 km=$2 dateout=$3 datein=$4)
+②  Moving to instalation folder
+	
+    cd ~/Desktop/RentalCarApp/db/
+	
+③  Checking if the arguments input is correct andfile $plate.txt exist
+  
+    if [[ ($# -ne 4) ]]; then
+  	echo "Incorrect input. Please enter Plate, kilometers, dateout, datein Exiting the program... "
+    elif [ ! -f "$1.txt" ]; then
+        echo "Car don't exist, please crate a car, exiting the program... "
+
+④  Creating $plate.txt file with data about each specific car
+
+    echo "$km $dateout $datein" >> $plate.txt
+    echo "Trip recorded, exiting the program"
+
 ## 7. Development of the function: Edit car
+
+①
+②
+③
+④
+⑤
+
 ## 8. Development of the function: Uninstall
+
+①
+②
+③
+④
+⑤
 
 Evaluation
 -----------
