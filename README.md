@@ -208,15 +208,43 @@ The following steps summarize the algorithm to create a new car in the system.
 
 ## 7. Development of the function: Edit car
 
-①
-②
-③
-④
-⑤
+① Enter License model color passenger in the argument (license=$1 model=$2 color=$3 passenger=$4)
+② Check if the number of arguments is correct
 
+    if [ $# -ne 4 ]; then
+  	echo "Error with the number of arguments"
+        echo "Enter License Model Color Passengers"
+        cd ..
+        cd db
+        ls
+        exit
+    fi
+	
+③ Checking if wanted car exists
+     
+      cd ../db
+      if [ ! -f "$license.txt" ]; then
+    	echo "File not found!"
+  	cd ..
+  	cd db
+  	ls
+      fi
+      
+④ Find the line with the given car plate and delete it
+
+	sed -i "/^$license/d" maincarfile.txt
+	
+⑤ Add the new information
+	
+	echo "$license $model $color $passenger" >> maincarfile.txt
+	
 ## 8. Development of the function: Uninstall
 
-①
+① Checking if user didn't click run uninstall program by accident
+	
+	echo "Are you sure you want to uninstall RentalCarApp?"
+echo "( Press enter to continue press x to cancel )"
+
 ②
 ③
 ④
