@@ -242,70 +242,36 @@ The following steps summarize the algorithm to create a new car in the system.
 
 ① Checking if user didn't click run uninstall program by accident
 	
-	echo "Are you sure you want to uninstall RentalCarApp?"
-echo "( Press enter to continue press x to cancel )"
+    echo "Are you sure you want to uninstall RentalCarApp?"
+    echo "( Press enter to continue press x to cancel )"
+    if [[ ($cancel == x) ]];then
+  	echo "canceling..."
+  	sleep 2
+ 	exit
 
-②
-③
-④
-⑤
+② Remove everything in the CarRentalApp folder
 
+    cd ../
+    cd ../
+    rm -r RentalCarApp
+    echo "RentalCarApp succesfully uninstalled"
+    
 Evaluation
 -----------
 
-**A. Test Create.sh**
-
-1. First run of the program was unsuccessful because the db foldler was not existent.
-
-Also the create program did not store the license file inside the db folder. Chaging
-
-the line `echo " " > $license` to 'echo " " > db/$liecense.txt'.Solved this issue.
-
-2. Second run of the program we had one issue: the test file needed to move to the main folder 
-
-```.sh
-cd ../
-```
-
-This is necessary because the `create.sh` resides in the ain folder whereas the test file is inside the /tests folders..
-
-3. Third run: we check that the car was added to the main file. The following command is used:
-
-`lastLine=$( tail -n 1 db/maincarfile.txt )
-`
-
-This line is read the file maincarfile.txt from the last line (tail), 1 is number of the line we read from the last line. Because the car has just added so we just need to check the last line of the file. 
-
-4. Fourth run: error too many arguments
-
-`if [ "TXM301 nissan red 9" == $lastline ]; then
-        echo "Test two: Record was entered correctly: Passed"
-else
-        echo "Test two: Failed"
-fi
-`
-
-Error line with the if syntax: too many argument. Because $lastline has space between the words so we have to use " " for $lastline. => "$lastline"
-
-**Summary:** Alpha testing, White box testing and Dynamic testing 
-
-**B. Test Install.sh**
-
-1. First run of the program was unsuccessful because missing ; after the bracket of if syntax
-
-2. Second run if the program was unsuccessful because using -f to find the directory
-
-`
-if [[ -f "$1" ]];then
-	cd $1
-	if [[ -f "/db" && -d "/scripts" ]]
-`
-**Summary:** Alpha testing, Whitebox testing and Dynamic testing
-
-**C. Test DeleteCar.sh**
-
-1. First run of the program was unsuccessful because the syntax is not correct
-
-`
-if -f "$carDelete" "maincarfile.txt";
-`
+|    CRITERIA                                                             |   MET?  |
+| ----------------------------------------------------------------------- |  -------
+| A simple based terminal program					  |   Yes
+|									  |
+| A simple and transparent installation					  |   Yes
+|									  |
+| Easy commands that allow to create a car, record trip, query the trip   |   Yes
+|  history of car, edit, and delete car					  |	
+|									  |
+| Easy commands that allow to enter the detail of the trip distance (km)  |   Yes
+|									  |   
+| A basic permanent storage system and backup				  |   Yes
+|									  |
+| A command to see total statistic					  |   Yes
+|									  |
+| User-skill independent						  |   Yes
