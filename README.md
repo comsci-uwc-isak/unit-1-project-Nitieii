@@ -18,7 +18,7 @@ Planning
  A car rental office wants to purchase a program that collect basic information about the distance driven for each car. This program should have easy commands to create information about car: Name, model of cars and number of passengers. Furthermore, the user can recored the trip of each car, the day start, end and the kilometer that the car runned.  Also, they can edit the record (add or remove) the information of the car they want. Last but not least, the user can storage the system and backup it in their computer or USB. 
  
 ### Solution proposed
- I decided that choosing Bash Script would be the best solution for Car Rental App because the user required a simple installation and could use the program easily. Next, I choose terminal to write the program, because the target to       and it has already been on computer so we no need to install it. 
+ I decided that choosing Bash Script would be the best solution for Car Rental App because the user required a simple installation and could use the program easily. Next, I choose terminal to write the program, because it has already been on computer so we no need to install it. So the user can use terminal to install and use the program easily and conveniently.
  
 ### Success Criteria
  These are measurabke outcomes
@@ -35,6 +35,8 @@ Design
 ---------
 ![SystemDiagram](Diagram.png)
 **Fig. 1** First sketch of the system showing the main input/output components, actions and software requirement.
+
+Fi
 
 Development
 --------
@@ -75,43 +77,129 @@ mkdir scripts
 
 echo "struture created successfully"
 
-## 2.Development of the function: Create a new car
+## 2. Create a new car
 The following steps summarize the algorithm to create a new car in the system. 
 
-① Get input
+① Get input from the arguments
 
 ② Check number of argurments; if 4 then continue, if not ext 'message'
-    if [ $# -eq 4 ]
+   if [[ ($# -ne 4) ]]; then
+  	echo "Incorrect input. Please enter Plate, Model, Color, Passengers. Exiting the program... "
+  	exit
+   fi
 
 ③ Write to main file with one extra line not erasing other Entries.
 
+   echo "$plate $model $color $pp" >> ~/Desktop/CarRentalApp/db/maincarfile.txt
+
 ④ Create car tip file with license plate.txt
 
-## 3. Development of the function: Summerize
+   echo "" > ~/Desktop/CarRentalApp/db/$plate.txt	
+   
+## 3. Summerize
 
-*)Summerize the total km per each car
-
-  ① Input the name of the car
+  ① Input the name of the car (file=$1)
   
   ② Check if the number of argument =1 
   
-  ③ Calculate the total sum of km
+  if [ $# -ne 1 ]; then
+    echo "Enter license plate"
+    ls
+    exit
+  fi
   
-  ④ Show the total Km
+  ③ Calculate the total sum of km of each car
+  
+  total=0
+  while read line;
+  do
+  	for km in $line
+  	do
+    	(( total=$km+$total ))
+        break
+  	done
+   done < "$file.txt"
+  
+  ④ Show the total Km of each car
+  
+  cd ..
+  cd scripts
+  bash frame.sh "TOTAL DISTANCE TRAVELED FOR $file was: $total"
+
+ 　⑤ Calculate the total sum of all cars (if user enter "all" as argument)
+  	
+   if [ $file == all ]; then
+    #Calculating total distance
+    total=0
+    #comand read used with while loop will read the file
+    # chosen of the end of loop done < "file.txt" line by line
+
+   #this will loop throug all the txt files in folder
+    for f in *.txt;
+    do
+   #This if sentance will avoid maincarfile.txt
+        if  [[ ($f == "maincarfile.txt") ]];then
+            continue
+        fi
+
+   while read line;
+       do
+          #for loop will go throug line word by word
+          for km in $line
+          do
+            (( total=$km+$total ))
+            #break will break the loop after first cycle
+            break
+          done
+        done < "$f"
+    done
+  
+ 　⑥ Show the total km of all the cars
+    cd ..
+    cd scripts
+    bash frame.sh "TOTAL DISTANCE TRAVELED BY ALL CARS WAS: $total"
+    exit	
  
-## 4. Development of the function: Backup
+ ## 4. Backup
 
-① Input the source location and location you want to backup
+   ① Input the location that user wants to backup (location=$1)
 
-② Copy file from source location to backup location
+   ② Check if the user entered just one argument and copy file from source location to backup location
+
+   if [[ $# -ne 1 ]]; then
+	echo "Sorry, there was an error with backing up your files."
+	exit
+	else
+  	#we copy database
+		cp -a ~/Desktop/RentalCarApp/db $location
+		echo "Successfully backed up into $location."
+   fi
 
 ## 5. Development of the function: Delete car
 
-① Input the name of the car want to delete
+① Input the name of the car want to delete (plate=$1)
 
-② Read the maincarfile.txt, file the name of the car and delete the line of that car
+②　Check if the argument provided is correct or not
+  
+  if [[ ($# -ne 1) ]];then
+	echo "Input is wrong, please type Plate again"
+  
+③ Check if the car file license is exist or not
+  
+  if [ ! -f "$1.txt" ];then
+	echo "The file don't exis. Please try again"
 
-③ Delete the $plate.txt 
+ ④ Delete the $plate.txt 
+  
+  rm $1.txt
+	bash frame.sh "The file was successfully deleted"
+	#delete whole line which includes the plate
+	sed -i '' "/$1/d" maincarfile.txt
+	bash frame.sh "The car information was successfully deleted"
+
+## 6. Development of the function: Record trip
+## 7. Development of the function: Edit car
+## 8. Development of the function: Uninstall
 
 Evaluation
 -----------
