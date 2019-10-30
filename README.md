@@ -260,18 +260,18 @@ Evaluation
 -----------
 
 |    CRITERIA                                                             |   MET?  |
-| ----------------------------------------------------------------------- |  -------
-| A simple based terminal program					  |   Yes
-|									  |
-| A simple and transparent installation					  |   Yes
-|									  |
-| Easy commands that allow to create a car, record trip, query the trip   |   Yes
-  history of car, edit, and delete car					  |	
-|									  |
-| Easy commands that allow to enter the detail of the trip distance (km)  |   Yes
-|									  |   
-| A basic permanent storage system and backup				  |   Yes
-|									  |
-| A command to see total statistic					  |   Yes
-|									  |
-| User-skill independent						  |   Yes
+| ----------------------------------------------------------------------- |  -------|
+| A simple based terminal program					  |   Yes   |
+|									  |	    |
+| A simple and transparent installation					  |   Yes   |
+|									  |         |
+| Easy commands that allow to create a car, record trip, query the trip   |   Yes   |
+  history of car, edit, and delete car					  |	    |
+|									  |         |
+| Easy commands that allow to enter the detail of the trip distance (km)  |   Yes   |
+|									  |         |
+| A basic permanent storage system and backup				  |   Yes   |
+|									  |         |
+| A command to see total statistic					  |   Yes   |
+|									  |         |
+| User-skill independent						  |   Yes   |
