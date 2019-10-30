@@ -38,6 +38,10 @@ Design
 
 Fi
 
+### Testing procedure
+
+
+
 Development
 --------
 ### 1. Script to install the app
