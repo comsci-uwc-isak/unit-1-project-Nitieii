@@ -161,12 +161,12 @@ The following steps summarize the algorithm to create a new car in the system.
    ② Check if the user entered just one argument and copy file from source location to backup location
 
     if [[ $# -ne 1 ]]; then
-	echo "Sorry, there was an error with backing up your files.
-	exit
-	else
-	#we copy database	
-		cp -a ~/Desktop/RentalCarApp/db $location
-		echo "Successfully backed up into $location."
+       echo "Sorry, there was an error with backing up your files.
+       exit
+    else
+       #we copy database	
+       cp -a ~/Desktop/RentalCarApp/db $location
+       echo "Successfully backed up into $location."
     fi
 
 ## 5. Development of the function: Delete car
@@ -175,7 +175,7 @@ The following steps summarize the algorithm to create a new car in the system.
 
 ②　Check if the argument provided is correct or not
   
-  if [[ ($# -ne 1) ]];then
+    if [[ ($# -ne 1) ]];then
 	echo "Input is wrong, please type Plate again"
   
 ③ Check if the car file license is exist or not
@@ -216,22 +216,22 @@ The following steps summarize the algorithm to create a new car in the system.
 ② Check if the number of arguments is correct
 
     if [ $# -ne 4 ]; then
-  	echo "Error with the number of arguments"
-        echo "Enter License Model Color Passengers"
-        cd ..
-        cd db
-        ls
-        exit
+       echo "Error with the number of arguments"
+       echo "Enter License Model Color Passengers"
+       cd ..
+       cd db
+       ls
+       exit
     fi
 	
 ③ Checking if wanted car exists
      
       cd ../db
       if [ ! -f "$license.txt" ]; then
-    	echo "File not found!"
-  	cd ..
-  	cd db
-  	ls
+    	 echo "File not found!"
+  	 cd ..
+  	 cd db
+  	 ls
       fi
       
 ④ Find the line with the given car plate and delete it
