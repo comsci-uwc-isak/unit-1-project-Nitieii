@@ -39,7 +39,7 @@ Design
 Fi
 
 ### Testing procedure
-![SystemDiagram](Testingprocess.)
+![SystemDiagram](Testingprocess.png)
 
 
 Development
