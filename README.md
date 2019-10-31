@@ -278,6 +278,7 @@ A. Install.sh
 	       echo "Test failed"
 	       fi
  B. Delete.sh
+ 
     - 1st running: The program works successfully
                 
     #!/bin/bash
