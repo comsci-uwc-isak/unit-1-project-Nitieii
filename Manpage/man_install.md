@@ -1,11 +1,11 @@
-    .TH man 6 "30 Oct 2019" "1.0" "create man page"
-.SH NAME
-create \- create a car 
-.SH SYNOPSIS
-bash create.sh [license] [model] [color] [passenger]
-.SH DESCRIPTION 
-create is a script that add the information of car into maincarfile and its own information file
-.SH EXAMPLES 
-bash create.sh LX930 Ford red 4
-.SH AUTHOR
-Tuan Anh
+    .TH man 6 "30 Oct 2019" "1.0" "install man page"
+    .SH NAME
+    install \- install the program 
+    .SH SYNOPSIS
+    bash install.sh
+    .SH DESCRIPTION 
+    install is a script that create CarRentalApp folder, also db, scripts, tests folder and copy all the program downloaded       into scripts folder
+    .SH EXAMPLES 
+    bash install.sh 
+    .SH AUTHOR
+    Tuan Anh
