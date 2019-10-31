@@ -277,8 +277,50 @@ A. Install.sh
                else
 	       echo "Test failed"
 	       fi
+ B. Delete.sh
+    - 1st running: The program works successfully
+                
+    #!/bin/bash
+    #This program will check if the car was deleted or not
+
+    carDelete=$1
  
-	 
+    cd ../
+    cd scripts
+    bash deleteCar.sh $1
+
+    if [[ grep -q "$carDelete" "maincarfile.txt" && -f "/Users/m19-018/Desktop/ComSciIsak/carRentalApp/db/car/$carDelete.txt" ]]; then
+        echo "Test failed"
+        else
+        echo "Test : passed"
+    fi
+C. Create.sh
+   - 1st running: The program has one issuse: The license file not found. Due to I did not create file in correct location (db). The file was created in scripts folder
+   - 2nd running: The syntax finding line including string input in text file was incorrect.
+   - 3rd running: The program works successfully
+        
+	#!/bin/bash
+        #This file test the first succes criterion, namely,
+        #A car can be created and stored in the database
+
+	#Step1: create a car using the script create
+	bash ../db/create.sh TXM301 nissan red 9
+
+	#Step2: Check that the license file.txt was created
+	if [ -f ../db/car/"TXM301.txt" ]; then
+		echo "test one:a txt file was cretead inside the db folder: passed"
+	else
+		echo "Test 1: Error. File not found"
+	fi
+
+	#Step3: Check that the car was added to the main file
+	lastline=$( tail -n 1 ../db/maincarfile.txt )
+	if [ "TXM301 nissan red 9" == "$lastline" ]; then
+		echo "Test two: Record was entered correctly: Passed"
+	else
+		echo "Test two: Failed"
+	fi
+
 Evaluation
 -----------
 
