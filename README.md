@@ -298,3 +298,15 @@ Evaluation
 | A command to see total statistic					  |   Yes   |
 |									  |         |
 | User-skill independent						  |   Yes   |
+
+**IMPROVEMENT**
+---------------
+
+①　Creating a program that calculate the money for renting a car
+
+   - A program that manage the total money for each car and all the cars is really necessary for the user. Adding this feature will help the user more effectively manage the renting cars.
+    
+②  -  Having more language options. With the global intergration nowsaday, the diversity of language is significant thing to make a program widely used.
+
+③  - Merge every program into one program to make the program more easily and conviniently used. The user just needs to open
+one program and choose task instead of opening many programs.
