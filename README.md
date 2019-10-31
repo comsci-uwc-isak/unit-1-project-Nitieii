@@ -259,7 +259,26 @@ The following steps summarize the algorithm to create a new car in the system.
     cd ../
     rm -r RentalCarApp
     echo "RentalCarApp succesfully uninstalled"
-    
+ 
+## TESTS
+A. Install.sh
+   - 1st Running : Wrong syntax
+	   Using -f when finding directory -> using -d
+	   
+	      [[ -d "/Users/m19-018/Desktop/ComSciIsak/carRentalApp" && -d "/Users/m19-018/Desktop/ComSciIsak/carRentalApp/db"               && -d "/Users/m19-018/Desktop/ComSciIsak/carRentalApp/scripts" ]]
+   - 2nd running: The program runned successfully
+              
+	      cd ../
+	      cd ../
+	      bash install.sh
+
+  	      if [[ -d "/Users/m19-018/Desktop/ComSciIsak/carRentalApp" && -d "/Users/m19     					      -018/Desktop/ComSciIsak/carRentalApp/db" && -d "/Users/m19-018/Desktop/ComSciIsak/carRentalApp/scripts" ]];then
+	   	   echo "Test the install program: passed"	
+               else
+	       echo "Test failed"
+	       fi
+ 
+	 
 Evaluation
 -----------
 
