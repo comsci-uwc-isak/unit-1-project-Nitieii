@@ -169,7 +169,7 @@ The following steps summarize the algorithm to create a new car in the system.
        echo "Successfully backed up into $location."
     fi
 
-## 5. Development of the function: Delete car
+## 5.Delete car
 
 ① Input the name of the car want to delete (plate=$1)
 
@@ -191,7 +191,7 @@ The following steps summarize the algorithm to create a new car in the system.
 	sed -i '' "/$1/d" maincarfile.txt
 	bash frame.sh "The car information was successfully deleted"
 
-## 6. Development of the function: Record trip
+## 6. Record trip
 
 ①　Input the info about the trip in the arguments (plate=$1 km=$2 dateout=$3 datein=$4)
 ②  Moving to instalation folder
@@ -210,7 +210,7 @@ The following steps summarize the algorithm to create a new car in the system.
     echo "$km $dateout $datein" >> $plate.txt
     echo "Trip recorded, exiting the program"
 
-## 7. Development of the function: Edit car
+## 7. Edit car
 
 ① Enter License model color passenger in the argument (license=$1 model=$2 color=$3 passenger=$4)
 ② Check if the number of arguments is correct
@@ -242,7 +242,7 @@ The following steps summarize the algorithm to create a new car in the system.
 	
 	echo "$license $model $color $passenger" >> maincarfile.txt
 	
-## 8. Development of the function: Uninstall
+## 8. Uninstall
 
 ① Checking if user didn't click run uninstall program by accident
 	
