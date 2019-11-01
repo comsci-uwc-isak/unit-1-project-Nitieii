@@ -21,11 +21,11 @@ Planning
  I decided that choosing Bash Script would be the best solution for Car Rental App because the user required a simple installation and could use the program easily. Next, I choose terminal to write the program, because it has already been on computer so we no need to install it. So the user can use terminal to install and use the program easily and conveniently. This program help the user do the task with two or less steps.
  
 ### Success Criteria
- These are measurabke outcomes
+ These are measurable outcomes
  1. A car can be created and stored in the database
  2. A car information can be edited
  3. A car can be deleted from the database
- 4. The installation is ***simple-> one step process***
+ 4. The installation is ***simple -> one step process***
  5. A summery (total/average distance traveled)can be generated for a particular car
  6. Trips can be recorded and stored for an existing car.
  7. A basic detabase system is implemented.
@@ -339,7 +339,7 @@ Evaluation
 | Easy commands that allow to create a car, record trip, query the trip,  |   Yes   | - The user just need to run the program|   history of car, edit, and delete car	                                            and enter the input		    
 |									  |         | 					     |
 | Easy commands that allow to enter the detail of the trip distance (km)  |   Yes   | - The user just need to run the program|
-|									  |         |and enter the trip detail              |
+|									  |         |and enter the trip detail               |
 | A basic permanent storage system and backup				  |   Yes   | - Enter the location and the db folder |
 |									  |         |will be backed up into that location
 | A command to see total statistic					  |   Yes   | - The user just need to run summary    |
