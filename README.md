@@ -18,29 +18,33 @@ Planning
  A car rental office wants to purchase a program that collect basic information about the distance driven for each car. This program should have easy commands to create information about car: Name, model of cars and number of passengers. Furthermore, the user can recored the trip of each car, the day start, end and the kilometer that the car runned.  Also, they can edit the record (add or remove) the information of the car they want. Last but not least, the user can storage the system and backup it in their computer or USB. 
  
 ### Solution proposed
- I decided that choosing Bash Script would be the best solution for Car Rental App because the user required a simple installation and could use the program easily. Next, I choose terminal to write the program, because it has already been on computer so we no need to install it. So the user can use terminal to install and use the program easily and conveniently.
+ I decided that choosing Bash Script would be the best solution for Car Rental App because the user required a simple installation and could use the program easily. Next, I choose terminal to write the program, because it has already been on computer so we no need to install it. So the user can use terminal to install and use the program easily and conveniently. This program help the user do the task with two or less steps.
  
 ### Success Criteria
  These are measurabke outcomes
  1. A car can be created and stored in the database
- 1. A car information can be edited
- 1. A car can be deleted from the database
- 1. The installation is ***simple-> one step process***
- 1. A summery (total/average distance traveled)can be generated for a particular car
- 1. Trips can be recorded and stored for an existing car.
- 1. A basic detabase system is implemented.
- 1. A basic backup functionallity is available.
+ 2. A car information can be edited
+ 3. A car can be deleted from the database
+ 4. The installation is ***simple-> one step process***
+ 5. A summery (total/average distance traveled)can be generated for a particular car
+ 6. Trips can be recorded and stored for an existing car.
+ 7. A basic detabase system is implemented.
+ 8. A basic backup functionallity is available.
  
 Design
 ---------
 ![SystemDiagram](Diagram.png)
 **Fig. 1** First sketch of the system showing the main input/output components, actions and software requirement.
 
-Fi
 
 ### Testing procedure
 ![SystemDiagram](Testingprocess.png)
 **Fig. 2** This diagram shows the input and the expected output when running programs.
+
+
+### Flowchart
+
+
 
 
 Development
@@ -88,7 +92,7 @@ The following steps summarize the algorithm to create a new car in the system.
      
      echo "" > ~/Desktop/CarRentalApp/db/$plate.txt	
    
-## 3. Summerize
+## 3. Summary 
 
   ① Input the name of the car (file=$1)
   
@@ -118,7 +122,7 @@ The following steps summarize the algorithm to create a new car in the system.
     cd scripts
     bash frame.sh "TOTAL DISTANCE TRAVELED FOR $file was: $total"
 
- 　⑤ Calculate the total sum of all cars (if user enter "all" as argument)
+ ⑤ Calculate the total sum of all cars (if user enter "all" as argument)
   	
     if [ $file == all ]; then
     #Calculating total distance
