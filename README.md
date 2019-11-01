@@ -336,16 +336,17 @@ Evaluation
 |									  |	    |					     |
 | A simple and transparent installation					  |   Yes   | - 1 step to install the program	     |
 |									  |         |					     |
-| Easy commands that allow to create a car, record trip, query the trip,  |   Yes   | - The user just need to run the program|   history of car, edit, and delete car	                                             and enter the input		    
+| Easy commands that allow to create a car, record trip, query the trip,  |   Yes   | - The user just need to run the program|   history of car, edit, and delete car	                                            and enter the input		    
 |									  |         | 					     |
 | Easy commands that allow to enter the detail of the trip distance (km)  |   Yes   | - The user just need to run the program|
-|									  |         | and enter the trip detail              |
+|									  |         |and enter the trip detail              |
 | A basic permanent storage system and backup				  |   Yes   | - Enter the location and the db folder |
-|									  |         | will be backed up into that location
+|									  |         |will be backed up into that location
 | A command to see total statistic					  |   Yes   | - The user just need to run summary    |
-|									  |         | program and enter name of car or all
+|									  |         |program and enter name of car or all
 | User-skill independent						  |   Yes   | - Every program is easy to use with two|
-|									  |         | or less step                           |		
+|									  |         |or less step                            | 	 	
+
 **IMPROVEMENT**
 ---------------
 
