@@ -323,9 +323,11 @@ C. Create.sh
 		echo "Test two: Failed"
 	fi
  D. Edit.sh
- 	- 1st running: The program has one error on wrong syntax of finding string in line and detele that line in text file
+ 
+   - 1st running: The program has one error on wrong syntax of finding string in line and detele that line in text file
 	   The reason is missing ' ' in sed -i ' ' "/^$license/d" maincarfile.txt
-	- 2nd running: The program works successfully
+	  
+   - 2nd running: The program works successfully
 	      
 Evaluation
 -----------
