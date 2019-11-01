@@ -40,6 +40,7 @@ Fi
 
 ### Testing procedure
 ![SystemDiagram](Testingprocess.png)
+**Fig. 2** This diagram shows the input and the expected output when running programs.
 
 
 Development
