@@ -48,29 +48,25 @@ Development
 ### 1. Script to install the app
 The following script creates the app folder and inside it creates two more folder: database and scripts
 
-    #!/bin/bash
-    #This file creates the structure for the
+    #! /bin/bash
+    #This file creates the structure for the 
     #minimal car Rental_App
-        echo "Starring the installation"
-        echo "Enter the path where you want to insall. Press Enter"
-        read path
 
-    #moving to the desired location
-	cd $path
-	echo "moving to $path"
-	echo $PWD
-
-    #Check for correct change directory   
-	if [ "$path" != "$PWD" ]; then
-                echo "Error creating the folder structure"
-        fi
-
+    echo "Starring the installation"
+    cd ~/Desktop
     #Create App folder
- 	mkdir RentalCarApp
-	cd RentalCarApp
-	mkdir database
-	mkdir scripts
-	echo "struture created successfully"
+    echo "Creating folders"
+    mkdir CarRentalApp
+    cd CarRentalApp
+    mkdir db
+    mkdir scripts
+    mkdir tests
+
+
+    echo "Set up scripts file"
+    cp -a ~/Downloads/CarRentalAppInstall/scripts/. ~/Desktop/CarRentalApp/scripts
+    cd scripts
+    bash frame.sh "Install successfully"
 
 ## 2. Create a new car
 The following steps summarize the algorithm to create a new car in the system. 
