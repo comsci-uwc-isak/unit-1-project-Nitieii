@@ -237,7 +237,7 @@ The following steps summarize the algorithm to create a new car in the system.
       
 ④ Find the line with the given car plate and delete it
 
-	sed -i "/^$license/d" maincarfile.txt
+	sed -i ' ' "/^$license/d" maincarfile.txt
 	
 ⑤ Add the new information
 	
@@ -322,29 +322,34 @@ C. Create.sh
 	else
 		echo "Test two: Failed"
 	fi
-
+ D. Edit.sh
+ 	- 1st running: The program has one error on wrong syntax of finding string in line and detele that line in text file
+	   The reason is missing ' ' in sed -i ' ' "/^$license/d" maincarfile.txt
+	- 2nd running: The program works successfully
+	      
 Evaluation
 -----------
 
-|    CRITERIA                                                             |   MET?  |
-| ----------------------------------------------------------------------- | ------- |
-| A simple based terminal program					  |   Yes   |
-|									  |	    |
-| A simple and transparent installation					  |   Yes   |
-|									  |         |
-| Easy commands that allow to create a car, record trip, query the trip,  |   Yes   |
-  history of car, edit, and delete car					  	    
-|									  |         |
-| Easy commands that allow to enter the detail of the trip distance (km)  |   Yes   |
-|									  |         |
-| A basic permanent storage system and backup				  |   Yes   |
-|									  |         |
-| A command to see total statistic					  |   Yes   |
-|									  |         |
-| User-skill independent						  |   Yes   |
-
+|    CRITERIA                                                             |   MET?  |              Evidence                  |
+| ----------------------------------------------------------------------- | ------- | -------------------------------------- |
+| A simple based terminal program					  |   Yes   | - The program runned in bash terminal  |
+|									  |	    |					     |
+| A simple and transparent installation					  |   Yes   | - 1 step to install the program	     |
+|									  |         |					     |
+| Easy commands that allow to create a car, record trip, query the trip,  |   Yes   | - The user just need to run the program|   history of car, edit, and delete car	                                             and enter the input		    
+|									  |         | 					     |
+| Easy commands that allow to enter the detail of the trip distance (km)  |   Yes   | - The user just need to run the program|
+|									  |         | and enter the trip detail              |
+| A basic permanent storage system and backup				  |   Yes   | - Enter the location and the db folder |
+|									  |         | will be backed up into that location
+| A command to see total statistic					  |   Yes   | - The user just need to run summary    |
+|									  |         | program and enter name of car or all
+| User-skill independent						  |   Yes   | - Every program is easy to use with two|
+|									  |         | or less step                           |		
 **IMPROVEMENT**
 ---------------
+
+This program can be extended by:
 
 ①　Creating a program that calculate the money for renting a car
 
