@@ -338,7 +338,7 @@ Evaluation
 -----------
 
 | CRITERIA | MET? | EVIDENCE |
-| :---: | :---: | :---: |
+|:--- | :---: |:--- |
 | A simple based terminal program terminal | Yes | The program runs in bash terminal |
 | A simple and transparent installation program | Yes | 1 step to install the program |
 | Easy commands that allow to create a car, record trip, history of query the trip,car, edit, and delete car | Yes | The user run the program, and just need to enter the input |
