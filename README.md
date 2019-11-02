@@ -43,9 +43,14 @@ Design
 
 
 ### Flowchart
+![SystemDiagram](Install.png)
+**Fig. 3** This is the flow chart of installing CarRentalApp process.
 
+![SystemDiagram](EditCar.png)
+**Fig. 4** This is the flow chart of editing car information process.
 
-
+![SystemDiagram](Uninstall.png)
+**Fig. 5** This is the flow chart of uninstalling CarRentalApp process.
 
 Development
 --------
