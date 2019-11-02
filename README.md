@@ -337,22 +337,21 @@ C. Create.sh
 Evaluation
 -----------
 
-|    CRITERIA                                                             |   MET?  |              Evidence                  |
-| ----------------------------------------------------------------------- | ------- | -------------------------------------- |
-| A simple based terminal program					  |   Yes   | - The program runned in bash terminal  |
-|									  |	    |					     |
-| A simple and transparent installation					  |   Yes   | - 1 step to install the program	     |
-|									  |         |					     |
-| Easy commands that allow to create a car, record trip, query the trip,  |   Yes   | - The user just need to run the program|   history of car, edit, and delete car	                                            and enter the input		    
-|									  |         | 					     |
-| Easy commands that allow to enter the detail of the trip distance (km)  |   Yes   | - The user just need to run the program|
-|									  |         |and enter the trip detail               |
-| A basic permanent storage system and backup				  |   Yes   | - Enter the location and the db folder |
-|									  |         |will be backed up into that location
-| A command to see total statistic					  |   Yes   | - The user just need to run summary    |
-|									  |         |program and enter name of car or all
-| User-skill independent						  |   Yes   | - Every program is easy to use with two|
-|									  |         |or less step                            | 	 	
+|                  CRITERIA                             | MET? |              Evidence                                       | 
+| ----------------------------------------------------- | ----- | ---------------------------------------------------------- |
+| A simple based terminal program		        |  Yes  | The program runned in bash terminal                        |
+|						        |	|					                     |
+| A simple and transparent installation			|  Yes  | 1 step to install the program	                             |
+|							|       |					                     |
+| Easy commands that allow to create a car, record trip,|  Yes  | The user run the program, and just need to enter the input |  | history of query the trip,car, edit, and delete car	                            	    
+|							|       | 					                     |
+| Easy commands that allow to enter the detail of the   |  Yes  | The user just need to run the program, and enter the trip  |   trip distance (km)								                                             
+| A basic permanent storage system and backup           |  Yes  | - Enter the location and the db folder will be backed up   |
+							         into that location
+| A command to see total statistic			|  Yes  | - The user just need to run summary program and enter name |
+  						                 of car or all
+| User-skill independent			        |  Yes  | - Every program is easy to use with two or less 
+                      	 	
 
 **IMPROVEMENT**
 ---------------
