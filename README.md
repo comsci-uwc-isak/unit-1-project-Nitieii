@@ -77,7 +77,7 @@ The following script creates the app folder and inside it creates two more folde
     cd scripts
     bash frame.sh "Install successfully"
 
-## 2. Create a new car
+### 2. Create a new car
 The following steps summarize the algorithm to create a new car in the system. 
 
 ① Get input from the arguments
@@ -97,7 +97,7 @@ The following steps summarize the algorithm to create a new car in the system.
      
      echo "" > ~/Desktop/CarRentalApp/db/$plate.txt	
    
-## 3. Summary 
+### 3. Summary 
 
   ① Input the name of the car (file=$1)
   
@@ -160,7 +160,7 @@ The following steps summarize the algorithm to create a new car in the system.
     bash frame.sh "TOTAL DISTANCE TRAVELED BY ALL CARS WAS: $total"
     exit	
  
- ## 4. Backup
+ ### 4. Backup
 
    ① Input the location that user wants to backup (location=$1)
 
@@ -175,7 +175,7 @@ The following steps summarize the algorithm to create a new car in the system.
        echo "Successfully backed up into $location."
     fi
 
-## 5.Delete car
+### 5.Delete car
 
 ① Input the name of the car want to delete (plate=$1)
 
@@ -197,7 +197,7 @@ The following steps summarize the algorithm to create a new car in the system.
 	sed -i '' "/$1/d" maincarfile.txt
 	bash frame.sh "The car information was successfully deleted"
 
-## 6. Record trip
+### 6. Record trip
 
 ①　Input the info about the trip in the arguments (plate=$1 km=$2 dateout=$3 datein=$4)
 ②  Moving to instalation folder
@@ -216,7 +216,7 @@ The following steps summarize the algorithm to create a new car in the system.
     echo "$km $dateout $datein" >> $plate.txt
     echo "Trip recorded, exiting the program"
 
-## 7. Edit car
+### 7. Edit car
 
 ① Enter License model color passenger in the argument (license=$1 model=$2 color=$3 passenger=$4)
 ② Check if the number of arguments is correct
@@ -248,7 +248,7 @@ The following steps summarize the algorithm to create a new car in the system.
 	
 	echo "$license $model $color $passenger" >> maincarfile.txt
 	
-## 8. Uninstall
+### 8. Uninstall
 
 ① Checking if user didn't click run uninstall program by accident
 	
@@ -266,7 +266,7 @@ The following steps summarize the algorithm to create a new car in the system.
     rm -r RentalCarApp
     echo "RentalCarApp succesfully uninstalled"
  
-## TESTS
+### TESTS
 A. Install.sh
    - 1st Running : Wrong syntax
 	   Using -f when finding directory -> using -d
