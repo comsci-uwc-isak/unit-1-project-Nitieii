@@ -345,12 +345,12 @@ Evaluation
 |							|       |					                     |
 | Easy commands that allow to create a car, record trip,|  Yes  | The user run the program, and just need to enter the input |  | history of query the trip,car, edit, and delete car	                            	    
 |							|       | 					                     |
-| Easy commands that allow to enter the detail of the   |  Yes  | The user just need to run the program, and enter the trip  |   trip distance (km)								                                             
+| Easy commands that allow to enter the detail of the   |  Yes  | The user just need to run the program, and enter the trip  | | trip distance (km)				       |       |			                                    | 
 | A basic permanent storage system and backup           |  Yes  | - Enter the location and the db folder will be backed up   |
-							         into that location
+|							|       | into that location                                         |
 | A command to see total statistic			|  Yes  | - The user just need to run summary program and enter name |
-  						                 of car or all
-| User-skill independent			        |  Yes  | - Every program is easy to use with two or less 
+|  						        |       | of car or all     					     |
+| User-skill independent			        |  Yes  | - Every program is easy to use with two or less 	     |
                       	 	
 
 **IMPROVEMENT**
