@@ -23,9 +23,11 @@ Q1: What skills have you learned?
   - Develop the way how I think to solve the problem
   - Finding syntax
   - Make a plan for the process of making app
+  
 Q2: What have worked for you in the classroom of CS?
   - Funny moments in the class
   - People support each others
+  
 Q3: What are some things/activities strategies that you would change in the CS classroom to achive your best in the next 6 weeks
   - Have some game related to CS for warming up
   - Have more activities 
