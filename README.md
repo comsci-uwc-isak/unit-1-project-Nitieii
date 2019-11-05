@@ -1,5 +1,9 @@
 ![CarRental](logo.png)
-
+```.py
+Marks=24
+Demo=4
+Total=(Marks+Demo)=28
+```
 Car Rental Minimal App
 ===========================
 
@@ -30,7 +34,18 @@ Planning
  6. Trips can be recorded and stored for an existing car.
  7. A basic detabase system is implemented.
  8. A basic backup functionallity is available.
- 
+
+**Criterion A**
+
+|Level|Descriptor|
+|----|-----|
+|5|The client in the car rental office is identified and his situation described. The rationale for choosing the proposed product (Computer tools used) is justified and includes a range of appropriate criteria for evaluating the success of the product.|
+```.sh
+Rational
+* Good job with this criterion! One more justificaiton for using BASH is that we were learning it. 
+* You missed one mark because the definition on the problem is limited, we don't really see the need for a solution for this particular client.
+```
+
 Design
 ---------
 ![SystemDiagram](Diagram.png)
@@ -51,6 +66,16 @@ Design
 
 ![SystemDiagram](Uninstall.png)
 **Fig. 5** This is the flow chart of uninstalling CarRentalApp process.
+
+## Criterion B
+|**level**|**Description**|
+|-----|------------|
+|8|An outline test plan is included but partially complete. A system diagram and some flow diagrams for algorithms in the product are included. They provide a basic understanding of how the product was developed.|
+```.sh
+Rationale
+*Great job with the system diagram. You can use the figure as a reference point and refeer to it with Fig. 1. For example: "As shown in Fig. 1, the computational system consists of ..." This is necessary to be concrete about the reason from including the picture.
+* Good job with the flow diagrams. Here you did not get all the full marks because you are missing the description for all 3 diagrams. Remember, an image without description is an unbiguous tool. Add a paragram explaining what YOU see in the image and the reason why you included. 
+```
 
 Development
 --------
@@ -333,7 +358,18 @@ C. Create.sh
 	   The reason is missing ' ' in sed -i ' ' "/^$license/d" maincarfile.txt
 	  
    - 2nd running: The program works successfully
-	      
+
+## Criterion C
+|**level**|**Description**|
+|-----|------------|
+|6|The proposed solution is characterized by the appropriate use of existing tools. The techniques are adequate for the task and their use is explained. All sources are identified.|
+```.sh
+Rationale
+* Neat work here Tuan
+* Try to use the references in the body of the document where you use the information, for example, when researching solutions to the problems you faced," As presented in [1], bash can be frustrating..." Use MLA and place the references at the bottom of the document.
+* In this section you want to record all the new and salient (important) points in the development of the project.
+```
+
 Evaluation
 -----------
 
@@ -363,3 +399,12 @@ This program can be extended by:
 
 ③  - Merge every program into one program to make the program more easily and conviniently used. The user just needs to open
 one program and choose task instead of opening many programs.
+
+## Criterion D
+|**level**|**Description**|
+|-----|------------|
+|5|The product is fully evaluated against the success criteria identified in criterion A. Recommendations for further improvement of the product are realistic.|
+```.sh
+Rationale
+* The Improvements are realistic and necessary. Neat work with the table, you will need to expand of the justifications for the criteria, some of them are ambiguous and we do not know how you got the MET outcome. To improve this you could add three columns to the table INPUT | EXPECTED OUTPUT | OBTAINED OUTPUT
+```
